@@ -1,6 +1,6 @@
 ﻿namespace _01.WelcomeToPatterns.Abstract
 {
-    internal interface IFlyBehavior
+    public interface IFlyBehavior
     {
         void Fly();
     }

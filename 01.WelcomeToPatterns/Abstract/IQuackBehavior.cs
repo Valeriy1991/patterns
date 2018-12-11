@@ -1,6 +1,6 @@
 ﻿namespace _01.WelcomeToPatterns.Abstract
 {
-    internal interface IQuackBehavior
+    public interface IQuackBehavior
     {
         void Quack();
     }
