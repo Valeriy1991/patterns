@@ -3,7 +3,7 @@ using _01.WelcomeToPatterns.Abstract;
 using _01.WelcomeToPatterns.FlyBehaviors;
 using _01.WelcomeToPatterns.QuackBehaviors;
 
-namespace _01.WelcomeToPatterns
+namespace _01.WelcomeToPatterns.Ducks
 {
     public class MallardDuck : Duck
     {

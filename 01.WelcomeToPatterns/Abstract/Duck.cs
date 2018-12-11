@@ -33,5 +33,15 @@ namespace _01.WelcomeToPatterns.Abstract
         {
             Console.WriteLine("All ducks float, even decoys!");
         }
+
+        public void SetFlyBehavior(IFlyBehavior flyBehavior)
+        {
+            FlyBehavior = flyBehavior;
+        }
+
+        public void SetQuackBehavior(IQuackBehavior quackBehavior)
+        {
+            QuackBehavior = quackBehavior;
+        }
     }
 }
