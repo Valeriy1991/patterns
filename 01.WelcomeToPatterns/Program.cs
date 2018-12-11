@@ -8,6 +8,7 @@ namespace _01.WelcomeToPatterns
         static void Main(string[] args)
         {
             Duck mallard = new MallardDuck();
+            mallard.Display();
             mallard.PerformQuack();
             mallard.PerformFly();
 
