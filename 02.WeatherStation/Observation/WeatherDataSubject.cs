@@ -39,6 +39,8 @@ namespace _02.WeatherStation.Observation
             _temp = temp;
             _humidity = humidity;
             _pressure = pressure;
+
+            MeasurementsChanged();
         }
     }
 }
