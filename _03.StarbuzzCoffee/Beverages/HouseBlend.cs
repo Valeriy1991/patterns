@@ -8,6 +8,11 @@ namespace _03.StarbuzzCoffee.Beverages
         {
             Description = "House blend coffee";
         }
+
+        public HouseBlend(CupSize cupSize) : this()
+        {
+            SetSize(cupSize);
+        }
         
         public override double GetCost()
         {

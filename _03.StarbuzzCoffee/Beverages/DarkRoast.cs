@@ -8,6 +8,11 @@ namespace _03.StarbuzzCoffee.Beverages
         {
             Description = "Dark Roast";
         }
+
+        public DarkRoast(CupSize cupSize)
+        {
+            SetSize(cupSize);
+        }
         
         public override double GetCost()
         {

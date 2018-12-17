@@ -1,3 +1,4 @@
+using System;
 using _03.StarbuzzCoffee.Abstract;
 
 namespace _03.StarbuzzCoffee.Condiments
@@ -18,7 +19,17 @@ namespace _03.StarbuzzCoffee.Condiments
 
         public override double GetCost()
         {
-            return _beverage.GetCost() + 0.15;
+            var size = _beverage.GetSize();
+            switch (size)
+            {
+                case CupSize.Small:
+                    return _beverage.GetCost() + 0.10;
+                case CupSize.Middle:
+                    return _beverage.GetCost() + 0.15;
+                case CupSize.Big:
+                    return _beverage.GetCost() + 0.20;
+            }
+            throw new ArgumentException(nameof(CupSize));
         }
     }
 }
