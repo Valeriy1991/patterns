@@ -5,7 +5,7 @@ namespace _04.Pizzeria.PizzaStores
 {
     public abstract class PizzaStore
     {
-        public Pizza CreateOrder(string type)
+        public Pizza OrderPizza(string type)
         {
             var pizza = CreatePizza(type);
 
