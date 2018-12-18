@@ -1,26 +1,25 @@
 using System;
 using System.Collections.Generic;
+using _04.Pizzeria.Ingredients.Cheeses;
+using _04.Pizzeria.Ingredients.Clams;
+using _04.Pizzeria.Ingredients.Doughs;
+using _04.Pizzeria.Ingredients.Pepperonies;
+using _04.Pizzeria.Ingredients.Sauces;
+using _04.Pizzeria.Ingredients.Veggies;
 
 namespace _04.Pizzeria.Pizzas
 {
     public abstract class Pizza
     {
         protected string Name { get; set; }
-        protected string Dough { get; set; }
-        protected string Sauce { get; set; }
-        protected List<string> Toppings { get; } = new List<string>();
+        protected Dough Dough { get; set; }
+        protected Sauce Sauce { get; set; }
+        protected Cheese Cheese { get; set; }
+        protected Veggie[] Veggies { get; set; }
+        protected Pepperoni Pepperoni { get; set; }
+        protected Clams Clams { get; set; }
 
-        public virtual void Prepare()
-        {
-            Console.WriteLine($"Preparing {Name}");
-            Console.WriteLine("Tossing sauce...");
-            Console.WriteLine("Adding sauce...");
-            Console.WriteLine("Adding toppings: ");
-            for (int i = 0; i < Toppings.Count; i++)
-            {
-                Console.WriteLine($"  {Toppings[i]}");
-            }
-        }
+        public abstract void Prepare();
 
         public virtual void Bake()
         {
@@ -40,6 +39,11 @@ namespace _04.Pizzeria.Pizzas
         public string GetName()
         {
             return Name;
+        }
+
+        public void SetName(string name)
+        {
+            Name = name;
         }
     }
 }

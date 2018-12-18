@@ -15,6 +15,15 @@ namespace _04.Pizzeria
             
             pizza = nyStore.OrderPizza("clam");
             Console.WriteLine($"Joel ordered a {pizza.GetName()}{Environment.NewLine}");
+            
+            
+            PizzaStore chicagoStore = new ChicagoPizzaStore();
+
+            pizza = chicagoStore.OrderPizza("cheese");
+            Console.WriteLine($"Ethan ordered a {pizza.GetName()}{Environment.NewLine}");
+            
+            pizza = chicagoStore.OrderPizza("clam");
+            Console.WriteLine($"Joel ordered a {pizza.GetName()}{Environment.NewLine}");
         }
     }
 }

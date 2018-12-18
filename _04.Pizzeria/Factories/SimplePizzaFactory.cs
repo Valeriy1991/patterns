@@ -3,6 +3,7 @@ using _04.Pizzeria.Pizzas;
 
 namespace _04.Pizzeria.Factories
 {
+    /*
     public class SimplePizzaFactory
     {
         public Pizza Create(string type)
@@ -18,4 +19,5 @@ namespace _04.Pizzeria.Factories
             return pizza;
         }
     }
+    */
 }

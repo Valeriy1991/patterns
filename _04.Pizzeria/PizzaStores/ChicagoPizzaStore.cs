@@ -3,9 +3,9 @@ using _04.Pizzeria.Pizzas;
 
 namespace _04.Pizzeria.PizzaStores
 {
-    public class NYPizzaStore : PizzaStore
+    public class ChicagoPizzaStore : PizzaStore
     {
-        private readonly IPizzaIngredientFactory _pizzaIngredientFactory = new NYPizzaIngredientFactory();
+        private readonly IPizzaIngredientFactory _pizzaIngredientFactory = new ChicagoPizzaIngredientFactory();
         
         protected override Pizza CreatePizza(string type)
         {
@@ -14,17 +14,17 @@ namespace _04.Pizzeria.PizzaStores
             if (type.Equals("cheese"))
             {
                 pizza = new CheesePizza(_pizzaIngredientFactory);
-                pizza.SetName("New York style cheese pizza");
+                pizza.SetName("Chicago style cheese pizza");
             }
             else if (type.Equals("pepperoni"))
             {
                 pizza = new PepperoniPizza(_pizzaIngredientFactory);
-                pizza.SetName("New York style pepperoni pizza");
+                pizza.SetName("Chicago style pepperoni pizza");
             }
             else if (type.Equals("clam"))
             {
                 pizza = new ClamPizza(_pizzaIngredientFactory);
-                pizza.SetName("New York style clam pizza");
+                pizza.SetName("Chicago style clam pizza");
             }
                 
             return pizza;
