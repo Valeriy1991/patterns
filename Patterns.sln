@@ -5,13 +5,15 @@ VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "01.WelcomeToPatterns", "01.WelcomeToPatterns\01.WelcomeToPatterns.csproj", "{37EB88D7-301C-41CA-98B0-21D79A4C48CF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "02.WeatherStation", "02.WeatherStation\02.WeatherStation.csproj", "{C2E2EB20-B038-44F3-B2BA-5F798AE0FD3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "02.WeatherStation", "02.WeatherStation\02.WeatherStation.csproj", "{C2E2EB20-B038-44F3-B2BA-5F798AE0FD3B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_03.StarbuzzCoffee", "_03.StarbuzzCoffee\_03.StarbuzzCoffee.csproj", "{C5129822-E2FB-408A-A7E3-AA16383CD611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_03.StarbuzzCoffee", "_03.StarbuzzCoffee\_03.StarbuzzCoffee.csproj", "{C5129822-E2FB-408A-A7E3-AA16383CD611}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_04.Pizzeria", "_04.Pizzeria\_04.Pizzeria.csproj", "{55BB3D27-0EE8-4A20-90B6-7EB92F51B9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04.Pizzeria", "_04.Pizzeria\_04.Pizzeria.csproj", "{55BB3D27-0EE8-4A20-90B6-7EB92F51B9D7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_05.Singleton", "_05.Singleton\_05.Singleton.csproj", "{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05.Singleton", "_05.Singleton\_05.Singleton.csproj", "{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06.Command", "_06.Command\_06.Command.csproj", "{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
