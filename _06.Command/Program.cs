@@ -10,9 +10,17 @@ namespace _06.Command
     {
         static void Main(string[] args)
         {
+            TrySimpleRemoteControl();
+            TryRemoteControl();
+        }
+
+        static void TrySimpleRemoteControl()
+        {
+            Console.WriteLine("\n----- Simple remote control -----\n");
+
             var simpleRemoteControl = new SimpleRemoteControl();
 
-            var light = new Light();
+            var light = new Light("Living room");
             var lightsOnCommand = new LightsOnCommand(light);
 
             simpleRemoteControl.SetCommand(lightsOnCommand);
@@ -23,6 +31,32 @@ namespace _06.Command
 
             simpleRemoteControl.SetCommand(garageDoorOpenCommand);
             simpleRemoteControl.PressTheButton();
+        }
+
+        static void TryRemoteControl()
+        {
+            var remoteControl = new RemoteControl();
+
+            var livingRoomLight = new Light("Living room");
+            var kitchenLight = new Light("Kitchen");
+            var garageDoor = new GarageDoor();
+            var stereo = new Stereo("Living room");
+
+            var livingRoomLightOnCommand = new LightsOnCommand(livingRoomLight);
+            var livingRoomLightOffCommand = new LightsOffCommand(livingRoomLight);
+            var kitchenLightOnCommand = new LightsOnCommand(kitchenLight);
+            var kitchenLightOffCommand = new LightsOffCommand(kitchenLight);
+
+            remoteControl.SetCommand(0, livingRoomLightOnCommand, livingRoomLightOffCommand);
+            remoteControl.SetCommand(1, kitchenLightOnCommand, kitchenLightOffCommand);
+
+            Console.WriteLine(remoteControl);
+
+            remoteControl.PressOnButton(0);
+            remoteControl.PressOffButton(0);
+
+            remoteControl.PressOnButton(1);
+            remoteControl.PressOffButton(1);
         }
     }
 }
