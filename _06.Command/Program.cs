@@ -17,6 +17,12 @@ namespace _06.Command
 
             simpleRemoteControl.SetCommand(lightsOnCommand);
             simpleRemoteControl.PressTheButton();
+
+            var garageDoor = new GarageDoor();
+            var garageDoorOpenCommand = new GarageDoorOpenCommand(garageDoor);
+
+            simpleRemoteControl.SetCommand(garageDoorOpenCommand);
+            simpleRemoteControl.PressTheButton();
         }
     }
 }
