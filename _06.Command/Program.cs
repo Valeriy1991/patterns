@@ -14,6 +14,7 @@ namespace _06.Command
             //TryRemoteControl();
             //TryRemoteControlWithUndoing();
             TryRemoteControlWithUndoingForCeilingFan();
+            TryRemoteControlWithMacroCommand();
         }
 
         static void TrySimpleRemoteControl()
@@ -111,6 +112,35 @@ namespace _06.Command
             remoteControl.PressOnButton(1);
             Console.WriteLine(remoteControl);
             remoteControl.PressUndoButton();
+        }
+
+        static void TryRemoteControlWithMacroCommand()
+        {
+            Console.WriteLine("\n----- Remote control with party! -----\n");
+
+            var remoteControl = new RemoteControl();
+
+            var light = new Light("Living room");
+            var stereo = new Stereo("Living room");
+
+            var lightOn = new LightsOnCommand(light);
+            var lightOff = new LightsOffCommand(light);
+            var stereoOn = new StereoOnWithCDCommand(stereo);
+            var stereoOff = new StereoOffWithCDCommand(stereo);
+
+            var partyOn = new ICommand[] {lightOn, stereoOn};
+            var partyOff = new ICommand[] { lightOff, stereoOff };
+
+            var partyOnCommand = new MacroCommand(partyOn);
+            var partyOffCommand = new MacroCommand(partyOff);
+
+            remoteControl.SetCommand(0, partyOnCommand, partyOffCommand);
+            Console.WriteLine(remoteControl);
+
+            Console.WriteLine("\n-- Party on --\n");
+            remoteControl.PressOnButton(0);
+            Console.WriteLine("\n-- Party off --\n");
+            remoteControl.PressOffButton(0);
         }
     }
 }
