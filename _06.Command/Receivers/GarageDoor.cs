@@ -12,5 +12,15 @@ namespace _06.Command.Receivers
         {
             Console.WriteLine("Garage: light is on");
         }
+
+        public void LightOff()
+        {
+            Console.WriteLine("Garage: light is off");
+        }
+
+        public void Down()
+        {
+            Console.WriteLine("Garage: door is down");
+        }
     }
 }

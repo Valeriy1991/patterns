@@ -16,5 +16,10 @@ namespace _06.Command.Commands
         {
             _light.On();
         }
+
+        public void Undo()
+        {
+            _light.Off();
+        }
     }
 }

@@ -8,5 +8,10 @@ namespace _06.Command.Commands
         {
             
         }
+
+        public void Undo()
+        {
+            
+        }
     }
 }

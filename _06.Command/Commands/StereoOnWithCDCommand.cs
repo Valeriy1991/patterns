@@ -18,5 +18,10 @@ namespace _06.Command.Commands
             _stereo.SetCD();
             _stereo.SetVolume(11);
         }
+
+        public void Undo()
+        {
+            _stereo.Off();
+        }
     }
 }

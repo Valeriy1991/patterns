@@ -20,5 +20,11 @@ namespace _06.Command.Commands
 
             Console.WriteLine("Garage door is open");
         }
+
+        public void Undo()
+        {
+            _garageDoor.LightOff();
+            _garageDoor.Down();
+        }
     }
 }
