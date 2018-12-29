@@ -10,9 +10,10 @@ namespace _06.Command
     {
         static void Main(string[] args)
         {
-            TrySimpleRemoteControl();
-            TryRemoteControl();
-            TryRemoteControlWithUndoing();
+            //TrySimpleRemoteControl();
+            //TryRemoteControl();
+            //TryRemoteControlWithUndoing();
+            TryRemoteControlWithUndoingForCeilingFan();
         }
 
         static void TrySimpleRemoteControl()
@@ -77,8 +78,37 @@ namespace _06.Command
             Console.WriteLine(remoteControl);
             remoteControl.PressUndoButton();
 
+            Console.WriteLine();
+
             remoteControl.PressOffButton(0);
             remoteControl.PressOnButton(0);
+            Console.WriteLine(remoteControl);
+            remoteControl.PressUndoButton();
+        }
+
+        static void TryRemoteControlWithUndoingForCeilingFan()
+        {
+            Console.WriteLine("\n----- Remote control with Undo for ceiling fan -----\n");
+
+            var remoteControl = new RemoteControl();
+
+            var ceilingFan = new CeilingFan("Living room");
+
+            var ceilingFanMedium = new CeilingFanMediumCommand(ceilingFan);
+            var ceilingFanHigh = new CeilingFanHighCommand(ceilingFan);
+            var ceilingFanOff = new CeilingFanOffCommand(ceilingFan);
+
+            remoteControl.SetCommand(0, ceilingFanMedium, ceilingFanOff);
+            remoteControl.SetCommand(1, ceilingFanHigh, ceilingFanOff);
+
+            remoteControl.PressOnButton(0);
+            remoteControl.PressOffButton(0);
+            Console.WriteLine(remoteControl);
+            remoteControl.PressUndoButton();
+
+            Console.WriteLine();
+
+            remoteControl.PressOnButton(1);
             Console.WriteLine(remoteControl);
             remoteControl.PressUndoButton();
         }
