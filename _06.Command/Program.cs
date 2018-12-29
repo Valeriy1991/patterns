@@ -12,6 +12,7 @@ namespace _06.Command
         {
             TrySimpleRemoteControl();
             TryRemoteControl();
+            TryRemoteControlWithUndoing();
         }
 
         static void TrySimpleRemoteControl()
@@ -57,6 +58,29 @@ namespace _06.Command
 
             remoteControl.PressOnButton(1);
             remoteControl.PressOffButton(1);
+        }
+
+        static void TryRemoteControlWithUndoing()
+        {
+            Console.WriteLine("\n----- Remote control with Undo -----\n");
+
+            var remoteControl = new RemoteControl();
+
+            var livingRoomLight = new Light("Living room");
+            var livingRoomLightOn = new LightsOnCommand(livingRoomLight);
+            var livingRoomLightOff = new LightsOffCommand(livingRoomLight);
+
+            remoteControl.SetCommand(0, livingRoomLightOn, livingRoomLightOff);
+
+            remoteControl.PressOnButton(0);
+            remoteControl.PressOffButton(0);
+            Console.WriteLine(remoteControl);
+            remoteControl.PressUndoButton();
+
+            remoteControl.PressOffButton(0);
+            remoteControl.PressOnButton(0);
+            Console.WriteLine(remoteControl);
+            remoteControl.PressUndoButton();
         }
     }
 }

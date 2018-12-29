@@ -10,6 +10,7 @@ namespace _06.Command.Invokers
 
         private ICommand[] _onCommands;
         private ICommand[] _offCommands;
+        private ICommand _undoCommand;
 
         public RemoteControl()
         {
@@ -22,6 +23,8 @@ namespace _06.Command.Invokers
                 _onCommands[i] = noCommand;
                 _offCommands[i] = noCommand;
             }
+
+            _undoCommand = noCommand;
         }
 
         public void SetCommand(int slot, ICommand onCommand, ICommand offCommand)
@@ -32,11 +35,20 @@ namespace _06.Command.Invokers
 
         public void PressOnButton(int slot)
         {
-            _onCommands[slot].Execute();
+            var command = _onCommands[slot];
+            command.Execute();
+            _undoCommand = command;
         }
         public void PressOffButton(int slot)
         {
-            _offCommands[slot].Execute();
+            var command = _offCommands[slot];
+            command.Execute();
+            _undoCommand = command;
+        }
+
+        public void PressUndoButton()
+        {
+            _undoCommand.Undo();
         }
 
         public override string ToString()
