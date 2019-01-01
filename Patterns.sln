@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05.Singleton", "_05.Single
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06.Command", "_06.Command\_06.Command.csproj", "{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_07.Adapter", "_07.Adapter\_07.Adapter.csproj", "{98BC0BEA-6BC4-477A-9A52-6D4300658C07}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{98BC0BEA-6BC4-477A-9A52-6D4300658C07}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{98BC0BEA-6BC4-477A-9A52-6D4300658C07}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{98BC0BEA-6BC4-477A-9A52-6D4300658C07}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{98BC0BEA-6BC4-477A-9A52-6D4300658C07}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
