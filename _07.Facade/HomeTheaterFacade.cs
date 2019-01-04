@@ -1,3 +1,4 @@
+using System;
 using _07.Facade.Components;
 
 namespace _07.Facade
@@ -24,6 +25,40 @@ namespace _07.Facade
             _theaterLights = theaterLights;
             _screen = screen;
             _popper = popper;
+        }
+
+        public void WatchMovie(string movie)
+        {
+            Console.WriteLine($"Get ready to watch a movie \"{movie}\"...");
+            _popper.On();
+            _popper.Pop();
+
+            _theaterLights.Dim(10);
+            _screen.Down();
+
+            _projector.On();
+            _projector.WideScreenMode();
+
+            _amplifier.On();
+            _amplifier.SetDvd(_dvdPlayer);
+            _amplifier.SetSurroundSound();
+            _amplifier.SetVolume(5);
+
+            _dvdPlayer.On();
+            _dvdPlayer.Play(movie);
+        }
+
+        public void EndMovie()
+        {
+            Console.WriteLine($"Shutting movie theater down...");
+            _popper.Off();
+            _theaterLights.On();
+            _screen.Up();
+            _projector.Off();
+            _amplifier.Off();
+            _dvdPlayer.Stop();
+            _dvdPlayer.Eject();
+            _dvdPlayer.Off();
         }
     }
 }
