@@ -29,7 +29,7 @@ namespace _07.Facade
 
         public void WatchMovie(string movie)
         {
-            Console.WriteLine($"Get ready to watch a movie \"{movie}\"...");
+            Console.WriteLine($"\nGet ready to watch a movie \"{movie}\"...");
             _popper.On();
             _popper.Pop();
 
@@ -50,7 +50,7 @@ namespace _07.Facade
 
         public void EndMovie()
         {
-            Console.WriteLine($"Shutting movie theater down...");
+            Console.WriteLine("\nShutting movie theater down...");
             _popper.Off();
             _theaterLights.On();
             _screen.Up();
