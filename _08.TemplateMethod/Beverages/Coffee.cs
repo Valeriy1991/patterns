@@ -4,20 +4,12 @@ namespace _08.TemplateMethod.Beverages
 {
     public class Coffee : CaffeineBeverage
     {
-        public override void PrepareRecipe()
-        {
-            BoilWater();
-            BrewCoffeeGrinds();
-            PourInCup();
-            AddSugarAndMilk();
-        }
-
-        public void BrewCoffeeGrinds()
+        public override void Brew()
         {
             Console.WriteLine("Dripping Coffee through filter");
         }
 
-        public void AddSugarAndMilk()
+        public override void AddCondiments()
         {
             Console.WriteLine("Adding sugar and milk");
         }

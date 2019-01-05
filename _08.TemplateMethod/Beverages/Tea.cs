@@ -4,20 +4,12 @@ namespace _08.TemplateMethod.Beverages
 {
     public class Tea : CaffeineBeverage
     {
-        public override void PrepareRecipe()
-        {
-            BoilWater();
-            SteepTeaBag();
-            PourInCup();
-            AddLemon();
-        }
-
-        public void SteepTeaBag()
+        public override void Brew()
         {
             Console.WriteLine("Steeping the tea");
         }
 
-        public void AddLemon()
+        public override void AddCondiments()
         {
             Console.WriteLine("Adding lemon");
         }
