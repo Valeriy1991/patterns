@@ -1,6 +1,6 @@
 using System;
 
-namespace _08.TemplateMethod.Beverages
+namespace _08.TemplateMethod.Beverages.Abstract
 {
     public abstract class CaffeineBeverage
     {
