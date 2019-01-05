@@ -15,18 +15,18 @@ namespace _08.TemplateMethod.Beverages.Abstract
             AddCondiments();
         }
 
-        public void BoilWater()
+        private void BoilWater()
         {
             Console.WriteLine("Boiling water");
         }
 
-        public abstract void Brew();
+        protected abstract void Brew();
 
-        public void PourInCup()
+        private void PourInCup()
         {
             Console.WriteLine("Pouring into cup");
         }
 
-        public abstract void AddCondiments();
+        protected abstract void AddCondiments();
     }
 }
