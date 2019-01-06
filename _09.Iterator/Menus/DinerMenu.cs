@@ -14,6 +14,20 @@ namespace _09.Iterator.Menus
         public DinerMenu()
         {
             _menuItems = new MenuItem[MenuMaxItems];
+            AddMenuItem("Vegetarian BLT",
+                "(Fakin') Bacon with lettuce & tomato on whole wheat", true, 2.99M);
+            AddMenuItem("BLT",
+                "Bacon with lettuce & tomato on whole wheat", false, 2.99M);
+            AddMenuItem("Soup of the day",
+                "Soup of the day, with a side of potato salad", false, 3.29M);
+            AddMenuItem("Hotdog",
+                "A hot dog, with saurkraut, relish, onions, topped with cheese",
+                false, 3.05M);
+            AddMenuItem("Steamed Veggies and Brown Rice",
+                "Steamed vegetables over brown rice", true, 3.99M);
+            AddMenuItem("Pasta",
+                "Spaghetti with Marinara Sauce, and a slice of sourdough bread",
+                true, 3.89M);
         }
 
         public void AddMenuItem(string name, string description, bool isVegetarian, decimal price)
