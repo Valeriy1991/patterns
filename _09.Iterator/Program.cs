@@ -1,4 +1,5 @@
 ﻿using System;
+using _09.Iterator.Menus;
 
 namespace _09.Iterator
 {
@@ -6,7 +7,11 @@ namespace _09.Iterator
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            var breakfastMenu = new PancakeHouseMenu();
+            var dinerMenu = new DinerMenu();
+            
+            var waitress = new Waitress(dinerMenu, breakfastMenu);
+            waitress.PrintMenu();
         }
     }
 }

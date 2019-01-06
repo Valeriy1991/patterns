@@ -9,12 +9,33 @@ namespace _09.Iterator.Menus
     /// </summary>
     public class Waitress
     {
-        private readonly DinerMenu _dinerMenu = new DinerMenu();
-        private readonly PancakeHouseMenu _breakfastMenu = new PancakeHouseMenu();
+        private readonly DinerMenu _dinerMenu;
+        private readonly PancakeHouseMenu _breakfastMenu;
+
+        public Waitress(DinerMenu dinerMenu, PancakeHouseMenu breakfastMenu)
+        {
+            _dinerMenu = dinerMenu;
+            _breakfastMenu = breakfastMenu;
+        }
         
         public void PrintMenu()
         {
+            IIterator<MenuItem> breakfastIterator = _breakfastMenu.CreateIterator();
+            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
+
+            Console.WriteLine("MENU");
+            Console.WriteLine("--- BREAKFAST ---");
+            PrintMenu(breakfastIterator);
             
+            Console.WriteLine("\n--- LUNCH ---");
+            PrintMenu(dinerIterator);
+        }
+        private void PrintMenu(IIterator<MenuItem> iterator)
+        {
+            while (iterator.HasNext())
+            {
+                PrintMenuItem(iterator.Next());
+            }
         }
 
         public void PrintBreakfastMenu()
@@ -51,7 +72,7 @@ namespace _09.Iterator.Menus
 
         private void PrintMenuItem(MenuItem menuItem)
         {
-            Console.WriteLine($"{menuItem.Name}\n{menuItem.Price}\n{menuItem.Description}");
+            Console.WriteLine($"{menuItem.Name}  {menuItem.Price}\n  {menuItem.Description}");
         }
     }
 }
