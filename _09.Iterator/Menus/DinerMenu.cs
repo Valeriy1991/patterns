@@ -3,10 +3,11 @@ using System.Collections;
 using System.Collections.Generic;
 using _09.Iterator.Iterators;
 using _09.Iterator.Iterators.Abstract;
+using _09.Iterator.Menus.Abstract;
 
 namespace _09.Iterator.Menus
 {
-    public class DinerMenu
+    public class DinerMenu : IMenu
     {
         private int _menuItemIndex = 0;
         private readonly MenuItem[] _menuItems;

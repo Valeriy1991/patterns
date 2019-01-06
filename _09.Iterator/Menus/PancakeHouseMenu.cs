@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using _09.Iterator.Iterators;
 using _09.Iterator.Iterators.Abstract;
+using _09.Iterator.Menus.Abstract;
 
 namespace _09.Iterator.Menus
 {
-    public class PancakeHouseMenu
+    public class PancakeHouseMenu : IMenu
     {
         private readonly List<MenuItem> _menuItems;
 

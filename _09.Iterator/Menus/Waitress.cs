@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using _09.Iterator.Iterators.Abstract;
+using _09.Iterator.Menus.Abstract;
 
 namespace _09.Iterator.Menus
 {
@@ -10,10 +11,10 @@ namespace _09.Iterator.Menus
     /// </summary>
     public class Waitress
     {
-        private readonly DinerMenu _dinerMenu;
-        private readonly PancakeHouseMenu _breakfastMenu;
+        private readonly IMenu _dinerMenu;
+        private readonly IMenu _breakfastMenu;
 
-        public Waitress(DinerMenu dinerMenu, PancakeHouseMenu breakfastMenu)
+        public Waitress(IMenu dinerMenu, IMenu breakfastMenu)
         {
             _dinerMenu = dinerMenu;
             _breakfastMenu = breakfastMenu;
