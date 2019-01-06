@@ -39,5 +39,10 @@ namespace _09.Iterator.Menus
         {
             return new PancakeHouseMenuIterator(_menuItems);
         }
+
+        public IEnumerator<MenuItem> GetEnumerator()
+        {
+            return ((IEnumerable<MenuItem>)_menuItems).GetEnumerator();
+        }
     }
 }

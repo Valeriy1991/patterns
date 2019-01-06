@@ -1,4 +1,6 @@
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using _09.Iterator.Iterators;
 using _09.Iterator.Iterators.Abstract;
 
@@ -45,6 +47,11 @@ namespace _09.Iterator.Menus
         public IIterator<MenuItem> CreateIterator()
         {
             return new DinerMenuIterator(_menuItems);
+        }
+
+        public IEnumerator<MenuItem> GetEnumerator()
+        {
+            return ((IEnumerable<MenuItem>)_menuItems).GetEnumerator();
         }
     }
 }

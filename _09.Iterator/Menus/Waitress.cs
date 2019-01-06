@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using _09.Iterator.Iterators.Abstract;
 
@@ -20,8 +21,10 @@ namespace _09.Iterator.Menus
         
         public void PrintMenu()
         {
-            IIterator<MenuItem> breakfastIterator = _breakfastMenu.CreateIterator();
-            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
+//            IIterator<MenuItem> breakfastIterator = _breakfastMenu.CreateIterator();
+//            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
+            var breakfastIterator = _breakfastMenu.GetEnumerator();
+            var dinerIterator = _breakfastMenu.GetEnumerator();
 
             Console.WriteLine("MENU");
             Console.WriteLine("--- BREAKFAST ---");
@@ -35,6 +38,13 @@ namespace _09.Iterator.Menus
             while (iterator.HasNext())
             {
                 PrintMenuItem(iterator.Next());
+            }
+        }
+        private void PrintMenu(IEnumerator<MenuItem> iterator)
+        {
+            while (iterator.MoveNext())
+            {
+                PrintMenuItem(iterator.Current);
             }
         }
 
