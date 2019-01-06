@@ -1,15 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
+using _09.Iterator.Iterators;
+using _09.Iterator.Iterators.Abstract;
 
 namespace _09.Iterator.Menus
 {
     public class PancakeHouseMenu
     {
-        public List<MenuItem> MenuItems { get; private set; }
+        private readonly List<MenuItem> _menuItems;
 
         public PancakeHouseMenu()
         {
-            MenuItems = new List<MenuItem>()
+            _menuItems = new List<MenuItem>()
             {
                 new MenuItem("K&B's Pancake Breakfast",
                     "Pancakes with scrambled eggs, and toast",
@@ -31,6 +33,11 @@ namespace _09.Iterator.Menus
                     true,
                     3.59M)
             };
+        }
+
+        public IIterator<MenuItem> CreateIterator()
+        {
+            return new PancakeHouseMenuIterator(_menuItems);
         }
     }
 }

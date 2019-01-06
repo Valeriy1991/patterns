@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _09.Iterator.Iterators.Abstract;
 
 namespace _09.Iterator.Menus
 {
@@ -18,19 +19,23 @@ namespace _09.Iterator.Menus
 
         public void PrintBreakfastMenu()
         {
-            List<MenuItem> breakfastItems = _breakfastMenu.MenuItems;
-            for (int i = 0; i < breakfastItems.Count; i++)
+            IIterator<MenuItem> iterator = _breakfastMenu.CreateIterator();
+
+            while (iterator.HasNext())
             {
-                PrintMenuItem(breakfastItems[i]);
+                var nextMenuItem = iterator.Next();
+                PrintMenuItem(nextMenuItem);
             }
         }
 
         public void PrintLunchMenu()
         {
-            MenuItem[] lunchItems = _dinerMenu.MenuItems;
-            for (int i = 0; i < lunchItems.Length; i++)
+            IIterator<MenuItem> iterator = _dinerMenu.CreateIterator();
+
+            while (iterator.HasNext())
             {
-                PrintMenuItem(lunchItems[i]);
+                var nextMenuItem = iterator.Next();
+                PrintMenuItem(nextMenuItem);
             }
         }
 
