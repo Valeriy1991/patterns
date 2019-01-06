@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+
 namespace _09.Iterator.Menus
 {
     /// <summary>
@@ -5,6 +8,9 @@ namespace _09.Iterator.Menus
     /// </summary>
     public class Waitress
     {
+        private readonly DinerMenu _dinerMenu = new DinerMenu();
+        private readonly PancakeHouseMenu _pancakeHouseMenu = new PancakeHouseMenu();
+        
         public void PrintMenu()
         {
             
@@ -12,12 +18,20 @@ namespace _09.Iterator.Menus
 
         public void PrintBreakfastMenu()
         {
-            
+            List<MenuItem> breakfastItems = _pancakeHouseMenu.MenuItems;
+            for (int i = 0; i < breakfastItems.Count; i++)
+            {
+                PrintMenuItem(breakfastItems[i]);
+            }
         }
 
         public void PrintLunchMenu()
         {
-            
+            MenuItem[] lunchItems = _dinerMenu.MenuItems;
+            for (int i = 0; i < lunchItems.Length; i++)
+            {
+                PrintMenuItem(lunchItems[i]);
+            }
         }
 
         public void PrintVegetarianMenu()
@@ -28,6 +42,11 @@ namespace _09.Iterator.Menus
         public bool IsItemVegetarian(string name)
         {
             return false;
+        }
+
+        private void PrintMenuItem(MenuItem menuItem)
+        {
+            Console.WriteLine($"{menuItem.Name}\n{menuItem.Price}\n{menuItem.Description}");
         }
     }
 }
