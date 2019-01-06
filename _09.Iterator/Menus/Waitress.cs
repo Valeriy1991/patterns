@@ -9,7 +9,7 @@ namespace _09.Iterator.Menus
     public class Waitress
     {
         private readonly DinerMenu _dinerMenu = new DinerMenu();
-        private readonly PancakeHouseMenu _pancakeHouseMenu = new PancakeHouseMenu();
+        private readonly PancakeHouseMenu _breakfastMenu = new PancakeHouseMenu();
         
         public void PrintMenu()
         {
@@ -18,7 +18,7 @@ namespace _09.Iterator.Menus
 
         public void PrintBreakfastMenu()
         {
-            List<MenuItem> breakfastItems = _pancakeHouseMenu.MenuItems;
+            List<MenuItem> breakfastItems = _breakfastMenu.MenuItems;
             for (int i = 0; i < breakfastItems.Count; i++)
             {
                 PrintMenuItem(breakfastItems[i]);
