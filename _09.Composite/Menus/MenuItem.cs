@@ -1,20 +1,57 @@
+using System;
+using System.Text;
+using _09.Composite.Menus.Abstract;
+
 namespace _09.Composite.Menus
 {
-    public class MenuItem
+    public class MenuItem : MenuComponent
     {
-        public string Name { get; private set; }
-        public string Description { get; private set; }
-        public bool IsVegetarian { get; private set; }
-        public decimal Price { get; private set; }
+        private readonly string _name;
+        private readonly string _description;
+        private readonly bool _isVegetarian;
+        private readonly decimal _price;
 
         public MenuItem(string name, string description, bool isVegetarian, decimal price)
         {
-            Name = name;
-            Description = description;
-            IsVegetarian = isVegetarian;
-            Price = price;
+            _name = name;
+            _description = description;
+            _isVegetarian = isVegetarian;
+            _price = price;
+        }
+
+        public override string GetName()
+        {
+            return _name;
         }
         
-        
+        public override string GetDescription()
+        {
+            return _description;
+        }
+
+        public override decimal GetPrice()
+        {
+            return _price;
+        }
+
+        public override bool IsVegetarian()
+        {
+            return _isVegetarian;
+        }
+
+        public override void Print()
+        {
+            var messageBuilder = new StringBuilder();
+            messageBuilder.Append($"  {GetName()}");
+            if (IsVegetarian())
+            {
+                messageBuilder.Append(" (v)");
+            }
+
+            messageBuilder.Append($", {GetPrice()}");
+            messageBuilder.Append($"\n   -- {GetDescription()}");
+            
+            Console.WriteLine(messageBuilder);
+        }
     }
 }

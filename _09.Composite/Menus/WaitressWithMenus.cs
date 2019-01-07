@@ -35,7 +35,7 @@ namespace _09.Composite.Menus
         
         private void PrintMenuItem(MenuItem menuItem)
         {
-            Console.WriteLine($"{menuItem.Name}  {menuItem.Price}\n  {menuItem.Description}");
+            Console.WriteLine($"{menuItem.GetName()}  {menuItem.GetPrice()}\n  {menuItem.GetDescription()}");
         }
     }
 }
