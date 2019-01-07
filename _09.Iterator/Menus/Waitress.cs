@@ -27,7 +27,7 @@ namespace _09.Iterator.Menus
 //            IIterator<MenuItem> breakfastIterator = _breakfastMenu.CreateIterator();
 //            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
             var breakfastIterator = _breakfastMenu.GetEnumerator();
-            var dinerIterator = _breakfastMenu.GetEnumerator();
+            var dinerIterator = _dinerMenu.GetEnumerator();
             var cafeIterator = _cafeMenu.GetEnumerator();
 
             Console.WriteLine("MENU");
@@ -55,7 +55,7 @@ namespace _09.Iterator.Menus
             }
         }
 
-        public void PrintBreakfastMenu()
+        /*public void PrintBreakfastMenu()
         {
             IIterator<MenuItem> iterator = _breakfastMenu.CreateIterator();
 
@@ -85,8 +85,8 @@ namespace _09.Iterator.Menus
         public bool IsItemVegetarian(string name)
         {
             return false;
-        }
-
+        }*/
+        
         private void PrintMenuItem(MenuItem menuItem)
         {
             Console.WriteLine($"{menuItem.Name}  {menuItem.Price}\n  {menuItem.Description}");
