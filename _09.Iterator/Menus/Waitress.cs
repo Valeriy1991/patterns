@@ -13,11 +13,13 @@ namespace _09.Iterator.Menus
     {
         private readonly IMenu _dinerMenu;
         private readonly IMenu _breakfastMenu;
+        private readonly IMenu _cafeMenu;
 
-        public Waitress(IMenu dinerMenu, IMenu breakfastMenu)
+        public Waitress(IMenu dinerMenu, IMenu breakfastMenu, IMenu cafeMenu)
         {
             _dinerMenu = dinerMenu;
             _breakfastMenu = breakfastMenu;
+            _cafeMenu = cafeMenu;
         }
         
         public void PrintMenu()
@@ -26,6 +28,7 @@ namespace _09.Iterator.Menus
 //            IIterator<MenuItem> dinerIterator = _dinerMenu.CreateIterator();
             var breakfastIterator = _breakfastMenu.GetEnumerator();
             var dinerIterator = _breakfastMenu.GetEnumerator();
+            var cafeIterator = _cafeMenu.GetEnumerator();
 
             Console.WriteLine("MENU");
             Console.WriteLine("--- BREAKFAST ---");
@@ -33,6 +36,9 @@ namespace _09.Iterator.Menus
             
             Console.WriteLine("\n--- LUNCH ---");
             PrintMenu(dinerIterator);
+            
+            Console.WriteLine("\n--- DINNER ---");
+            PrintMenu(cafeIterator);
         }
         private void PrintMenu(IIterator<MenuItem> iterator)
         {

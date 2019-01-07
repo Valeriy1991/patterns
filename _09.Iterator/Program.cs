@@ -9,8 +9,9 @@ namespace _09.Iterator
         {
             var breakfastMenu = new PancakeHouseMenu();
             var dinerMenu = new DinerMenu();
+            var cafeMenu = new CafeMenu();
             
-            var waitress = new Waitress(dinerMenu, breakfastMenu);
+            var waitress = new Waitress(dinerMenu, breakfastMenu, cafeMenu);
             waitress.PrintMenu();
         }
     }
