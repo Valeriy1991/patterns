@@ -31,6 +31,7 @@ namespace _09.Iterator
             var dinerMenu = new DinerMenu();
             var cafeMenu = new CafeMenu();
             
+            // Все хорошо, но потерялись заголовки меню
             var waitress = new WaitressWithMenus(new List<IMenu>()
             {
                 breakfastMenu, dinerMenu, cafeMenu
