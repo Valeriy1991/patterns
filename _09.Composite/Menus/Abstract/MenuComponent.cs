@@ -12,7 +12,7 @@ namespace _09.Composite.Menus.Abstract
         {
             throw new InvalidOperationException();
         }
-        public virtual void GetChild(int index)
+        public virtual MenuComponent GetChild(int index)
         {
             throw new InvalidOperationException();
         }
