@@ -1,5 +1,7 @@
 using System;
+using System.Collections.Generic;
 using System.Text;
+using _09.Composite.Iterators;
 using _09.Composite.Menus.Abstract;
 
 namespace _09.Composite.Menus
@@ -52,6 +54,11 @@ namespace _09.Composite.Menus
             messageBuilder.Append($"\n   -- {GetDescription()}");
             
             Console.WriteLine(messageBuilder);
+        }
+
+        public override IEnumerator<MenuComponent> GetEnumerator()
+        {
+            return new NullIterator();
         }
     }
 }

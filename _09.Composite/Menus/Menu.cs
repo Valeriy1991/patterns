@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using _09.Composite.Iterators;
 using _09.Composite.Menus.Abstract;
 
 namespace _09.Composite.Menus
@@ -9,6 +10,7 @@ namespace _09.Composite.Menus
         private readonly List<MenuComponent> _menuComponents;
         private readonly string _name;
         private readonly string _description;
+        private IEnumerator<MenuComponent> _enumerator;
 
         public Menu(string name, string description)
         {
@@ -56,6 +58,14 @@ namespace _09.Composite.Menus
                     component.Print();
                 }
             }
+        }
+
+        public override IEnumerator<MenuComponent> GetEnumerator()
+        {
+            if (_enumerator == null)
+                _enumerator = new CompositeIterator((IEnumerator<MenuComponent>) _menuComponents.GetEnumerator());
+
+            return _enumerator;
         }
     }
 }

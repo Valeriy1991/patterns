@@ -1,4 +1,5 @@
 using System;
+using System.Collections.Generic;
 
 namespace _09.Composite.Menus.Abstract
 {
@@ -34,6 +35,11 @@ namespace _09.Composite.Menus.Abstract
             throw new InvalidOperationException();
         }
         public virtual void Print()
+        {
+            throw new InvalidOperationException();
+        }
+
+        public virtual IEnumerator<MenuComponent> GetEnumerator()
         {
             throw new InvalidOperationException();
         }
