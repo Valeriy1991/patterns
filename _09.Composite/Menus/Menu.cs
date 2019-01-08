@@ -63,7 +63,7 @@ namespace _09.Composite.Menus
         public override IEnumerator<MenuComponent> GetEnumerator()
         {
             if (_enumerator == null)
-                _enumerator = new CompositeIterator((IEnumerator<MenuComponent>) _menuComponents.GetEnumerator());
+                _enumerator = new CompositeIterator(_menuComponents.GetEnumerator());
 
             return _enumerator;
         }

@@ -21,5 +21,29 @@ namespace _09.Composite.Menus
         {
             _menu.Print();
         }
+
+        public void PrintVegetarianMenu()
+        {
+            using (var iterator = _menu.GetEnumerator())
+            {
+                Console.WriteLine("VEGETARIAN MENU\n----");
+                while (iterator.MoveNext())
+                {
+                    var menuComponent = iterator.Current;
+                    try
+                    {
+                        if (menuComponent.IsVegetarian())
+                        {
+                            // Будет вызван только для MenuItem и никогда - для Menu
+                            menuComponent.Print();
+                        }
+                    }
+                    catch (InvalidOperationException e)
+                    {
+                        // ignore
+                    }
+                }
+            }
+        }
     }
 }

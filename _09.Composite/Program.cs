@@ -21,6 +21,7 @@ namespace _09.Composite
             
             var waitress = new Waitress(menu);
             waitress.PrintMenu();
+            waitress.PrintVegetarianMenu();
         }
 
         static Menu CreatePancakeHouseMenu()
