@@ -25,8 +25,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_09.Iterator", "_09.Iterato
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_09.Composite", "_09.Composite\_09.Composite.csproj", "{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_09.Composite.Tests", "_09.Composite.Tests\_09.Composite.Tests.csproj", "{F4CDE456-208C-4504-A459-E04DC168E4BD}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -77,10 +75,6 @@ Global
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
