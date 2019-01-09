@@ -13,17 +13,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04.Pizzeria", "_04.Pizzeri
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05.Singleton", "_05.Singleton\_05.Singleton.csproj", "{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_06.Command", "_06.Command\_06.Command.csproj", "{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_06.Command", "_06.Command\_06.Command.csproj", "{AF8A5C33-3734-47DA-BE96-D8A365C50B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_07.Adapter", "_07.Adapter\_07.Adapter.csproj", "{98BC0BEA-6BC4-477A-9A52-6D4300658C07}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_07.Adapter", "_07.Adapter\_07.Adapter.csproj", "{98BC0BEA-6BC4-477A-9A52-6D4300658C07}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_07.Facade", "_07.Facade\_07.Facade.csproj", "{5A0576FF-5E67-4C93-A3A0-95081B855EA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_07.Facade", "_07.Facade\_07.Facade.csproj", "{5A0576FF-5E67-4C93-A3A0-95081B855EA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_08.TemplateMethod", "_08.TemplateMethod\_08.TemplateMethod.csproj", "{1C300604-EFC6-43FC-ADCF-F2A20712BDE5}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_08.TemplateMethod", "_08.TemplateMethod\_08.TemplateMethod.csproj", "{1C300604-EFC6-43FC-ADCF-F2A20712BDE5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_09.Iterator", "_09.Iterator\_09.Iterator.csproj", "{4C5E773B-A94E-41EB-9A32-CF4A5B74368F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_09.Iterator", "_09.Iterator\_09.Iterator.csproj", "{4C5E773B-A94E-41EB-9A32-CF4A5B74368F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_09.Composite", "_09.Composite\_09.Composite.csproj", "{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_09.Composite", "_09.Composite\_09.Composite.csproj", "{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_09.Composite.Tests", "_09.Composite.Tests\_09.Composite.Tests.csproj", "{F4CDE456-208C-4504-A459-E04DC168E4BD}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C0D56B30-B7C4-4BA4-940E-3993E6A074DC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4CDE456-208C-4504-A459-E04DC168E4BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
