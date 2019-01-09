@@ -39,19 +39,17 @@ namespace _09.Composite.Iterators
 
         private MenuComponent GetCurrent()
         {
-            if (MoveNext())
-            {
-                var iterator = (IEnumerator<MenuComponent>) _stack.Peek();
-                var menuComponent = iterator.Current;
-                if (menuComponent is Menu)
-                {
-                    _stack.Push(menuComponent.GetEnumerator());
-                }
+            if (_stack.Count == 0)
+                return null;
 
-                return menuComponent;
+            var iterator = (IEnumerator<MenuComponent>) _stack.Peek();
+            var menuComponent = iterator.Current;
+            if (menuComponent is Menu)
+            {
+                _stack.Push(menuComponent.GetEnumerator());
             }
 
-            return null;
+            return menuComponent;
         }
 
         object IEnumerator.Current => Current;
