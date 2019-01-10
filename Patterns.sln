@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_01.WelcomeToPatterns", "_01.WelcomeToPatterns\_01.WelcomeToPatterns.csproj", "{37EB88D7-301C-41CA-98B0-21D79A4C48CF}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_01.Strategy", "_01.Strategy\_01.Strategy.csproj", "{37EB88D7-301C-41CA-98B0-21D79A4C48CF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_02.WeatherStation", "_02.WeatherStation\_02.WeatherStation.csproj", "{C2E2EB20-B038-44F3-B2BA-5F798AE0FD3B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_02.Observer", "_02.Observer\_02.Observer.csproj", "{C2E2EB20-B038-44F3-B2BA-5F798AE0FD3B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_03.StarbuzzCoffee", "_03.StarbuzzCoffee\_03.StarbuzzCoffee.csproj", "{C5129822-E2FB-408A-A7E3-AA16383CD611}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_03.Decorator", "_03.Decorator\_03.Decorator.csproj", "{C5129822-E2FB-408A-A7E3-AA16383CD611}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04.Pizzeria", "_04.Pizzeria\_04.Pizzeria.csproj", "{55BB3D27-0EE8-4A20-90B6-7EB92F51B9D7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_04.Factory", "_04.Factory\_04.Factory.csproj", "{55BB3D27-0EE8-4A20-90B6-7EB92F51B9D7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_05.Singleton", "_05.Singleton\_05.Singleton.csproj", "{E02C8839-61B2-4B57-A31D-CC07D9C31D0B}"
 EndProject
