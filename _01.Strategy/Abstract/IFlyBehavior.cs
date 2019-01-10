@@ -1,4 +1,4 @@
-﻿namespace _01.WelcomeToPatterns.Abstract
+﻿namespace _01.Strategy.Abstract
 {
     public interface IFlyBehavior
     {

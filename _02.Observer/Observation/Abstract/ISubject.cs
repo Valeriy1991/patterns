@@ -1,4 +1,4 @@
-﻿namespace _02.WeatherStation.Observation.Abstract
+﻿namespace _02.Observer.Observation.Abstract
 {
     public interface ISubject
     {

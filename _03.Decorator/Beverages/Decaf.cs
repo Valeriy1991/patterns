@@ -1,6 +1,6 @@
-using _03.StarbuzzCoffee.Abstract;
+using _03.Decorator.Abstract;
 
-namespace _03.StarbuzzCoffee.Beverages
+namespace _03.Decorator.Beverages
 {
     public class Decaf : Beverage
     {

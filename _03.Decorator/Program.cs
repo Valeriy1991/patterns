@@ -1,9 +1,9 @@
 ﻿using System;
-using _03.StarbuzzCoffee.Abstract;
-using _03.StarbuzzCoffee.Beverages;
-using _03.StarbuzzCoffee.Condiments;
+using _03.Decorator.Abstract;
+using _03.Decorator.Beverages;
+using _03.Decorator.Condiments;
 
-namespace _03.StarbuzzCoffee
+namespace _03.Decorator
 {
     class Program
     {

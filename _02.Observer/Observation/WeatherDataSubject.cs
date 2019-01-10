@@ -1,8 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using _02.WeatherStation.Observation.Abstract;
+﻿using System.Collections.Generic;
+using _02.Observer.Observation.Abstract;
 
-namespace _02.WeatherStation.Observation
+namespace _02.Observer.Observation
 {
     public class WeatherDataSubject : ISubject
     {

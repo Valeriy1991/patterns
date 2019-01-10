@@ -1,9 +1,9 @@
 ﻿using System;
-using _01.WelcomeToPatterns.Abstract;
-using _01.WelcomeToPatterns.FlyBehaviors;
-using _01.WelcomeToPatterns.QuackBehaviors;
+using _01.Strategy.Abstract;
+using _01.Strategy.FlyBehaviors;
+using _01.Strategy.QuackBehaviors;
 
-namespace _01.WelcomeToPatterns.Ducks
+namespace _01.Strategy.Ducks
 {
     public class ModelDuck : Duck
     {

@@ -1,9 +1,9 @@
 ﻿using System;
-using _01.WelcomeToPatterns.Abstract;
-using _01.WelcomeToPatterns.Ducks;
-using _01.WelcomeToPatterns.FlyBehaviors;
+using _01.Strategy.Abstract;
+using _01.Strategy.Ducks;
+using _01.Strategy.FlyBehaviors;
 
-namespace _01.WelcomeToPatterns
+namespace _01.Strategy
 {
     class Program
     {

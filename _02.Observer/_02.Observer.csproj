@@ -3,7 +3,8 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_02.WeatherStation</RootNamespace>
+    <RootNamespace>_02.Observer</RootNamespace>
+    <AssemblyName>_02.Observer</AssemblyName>
   </PropertyGroup>
 
 </Project>

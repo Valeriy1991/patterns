@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _01.WelcomeToPatterns.Abstract
+namespace _01.Strategy.Abstract
 {
     public abstract class Duck
     {

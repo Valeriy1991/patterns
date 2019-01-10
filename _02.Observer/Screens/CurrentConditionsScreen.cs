@@ -1,9 +1,8 @@
 ﻿using System;
-using _02.WeatherStation.Observation;
-using _02.WeatherStation.Observation.Abstract;
-using _02.WeatherStation.Screens.Abstract;
+using _02.Observer.Observation.Abstract;
+using _02.Observer.Screens.Abstract;
 
-namespace _02.WeatherStation.Screens
+namespace _02.Observer.Screens
 {
     public class CurrentConditionsScreen : IObserver, IScreen
     {

@@ -3,7 +3,7 @@
   <PropertyGroup>
     <OutputType>Exe</OutputType>
     <TargetFramework>netcoreapp2.1</TargetFramework>
-    <RootNamespace>_01.WelcomeToPatterns</RootNamespace>
+    <RootNamespace>_01.Strategy</RootNamespace>
   </PropertyGroup>
 
 </Project>

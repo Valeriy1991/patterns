@@ -1,4 +1,4 @@
-﻿namespace _02.WeatherStation.Screens.Abstract
+﻿namespace _02.Observer.Screens.Abstract
 {
     public interface IScreen
     {

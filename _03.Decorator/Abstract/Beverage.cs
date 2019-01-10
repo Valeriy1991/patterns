@@ -1,6 +1,6 @@
 using System.Globalization;
 
-namespace _03.StarbuzzCoffee.Abstract
+namespace _03.Decorator.Abstract
 {
     public abstract class Beverage
     {

@@ -1,9 +1,8 @@
 ﻿using System;
-using _02.WeatherStation.Observation;
-using _02.WeatherStation.Observation.Abstract;
-using _02.WeatherStation.Screens;
+using _02.Observer.Observation;
+using _02.Observer.Screens;
 
-namespace _02.WeatherStation
+namespace _02.Observer
 {
     class Program
     {

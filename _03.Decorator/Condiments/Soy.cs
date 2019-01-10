@@ -1,7 +1,7 @@
 using System;
-using _03.StarbuzzCoffee.Abstract;
+using _03.Decorator.Abstract;
 
-namespace _03.StarbuzzCoffee.Condiments
+namespace _03.Decorator.Condiments
 {
     public class Soy : CondimentDecorator
     {
