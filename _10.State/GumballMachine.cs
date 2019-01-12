@@ -7,10 +7,11 @@ namespace _10.State
 {
     public class GumballMachine
     {
-        private IState _soldOutState;
-        private IState _noQuarterState;
-        private IState _hasQuarterState;
-        private IState _soldState;
+        private readonly IState _soldOutState;
+        private readonly IState _noQuarterState;
+        private readonly IState _hasQuarterState;
+        private readonly IState _soldState;
+        private readonly IState _winnerState;
 
         private IState _state;
         private int _count = 0;
@@ -21,6 +22,7 @@ namespace _10.State
             _noQuarterState = new NoQuarterState(this);
             _hasQuarterState = new HasQuarterState(this);
             _soldState = new SoldState(this);
+            _winnerState = new WinnerState(this);
             
             _count = count;
             if (count > 0)
@@ -116,6 +118,11 @@ namespace _10.State
         internal IState GetSoldState()
         {
             return _soldState;
+        }
+
+        internal IState GetWinnerState()
+        {
+            return _winnerState;
         }
 
         internal int GetCount()

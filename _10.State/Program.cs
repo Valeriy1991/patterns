@@ -11,38 +11,21 @@ namespace _10.State
 
         static void TryGumballMachine()
         {
-            var gumbalMachine = new GumballMachine(5);
+            var gumballMachine = new GumballMachine(10);
 
-            Console.WriteLine(gumbalMachine);
+            Console.WriteLine(gumballMachine);
 
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
 
-            Console.WriteLine(gumbalMachine);
+            Console.WriteLine(gumballMachine);
 
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.EjectQuarter();
-            gumbalMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
+            gumballMachine.InsertQuarter();
+            gumballMachine.TurnCrank();
 
-            Console.WriteLine(gumbalMachine);
-
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
-            gumbalMachine.EjectQuarter();
-
-            Console.WriteLine(gumbalMachine);
-
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
-            gumbalMachine.InsertQuarter();
-            gumbalMachine.TurnCrank();
-
-            Console.WriteLine(gumbalMachine);
+            Console.WriteLine(gumballMachine);
         }
     }
 }

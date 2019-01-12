@@ -6,6 +6,7 @@ namespace _10.State.States
     public class HasQuarterState : IState
     {
         private readonly GumballMachine _machine;
+        private readonly Random _randomWinner = new Random();
         
         public HasQuarterState(GumballMachine machine)
         {
@@ -27,7 +28,15 @@ namespace _10.State.States
         public void TurnCrank()
         {
             Console.WriteLine("You turned...");
-            _machine.SetState(_machine.GetSoldState());
+            var winner = _randomWinner.Next(10);
+            if (winner == 0 && _machine.GetCount() > 1)
+            {
+                _machine.SetState(_machine.GetWinnerState());
+            }
+            else
+            {
+                _machine.SetState(_machine.GetSoldState());
+            }
         }
 
         public void Dispense()
