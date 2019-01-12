@@ -1,125 +1,63 @@
 ﻿using System;
 using System.Text;
+using _10.State.States;
+using _10.State.States.Abstract;
 
 namespace _10.State
 {
     public class GumballMachine
     {
-        private const int SOLD_OUT = 0;
-        private const int NO_QUARTER = 1;
-        private const int HAS_QUARTER = 2;
-        private const int SOLD = 3;
+        private IState _soldOutState;
+        private IState _noQuarterState;
+        private IState _hasQuarterState;
+        private IState _soldState;
 
-        private int _state = SOLD_OUT;
+        private IState _state;
         private int _count = 0;
 
         public GumballMachine(int count)
         {
+            _soldOutState = new SoldOutState(this);
+            _noQuarterState = new NoQuarterState(this);
+            _hasQuarterState = new HasQuarterState(this);
+            _soldState = new SoldState(this);
+            
             _count = count;
             if (count > 0)
             {
-                _state = NO_QUARTER;
+                _state = _noQuarterState;
             }
         }
 
         public void InsertQuarter()
         {
-            if (_state == HAS_QUARTER)
-            {
-                Console.WriteLine("You can't insert another quarter");
-            }
-            else if (_state == NO_QUARTER)
-            {
-                _state = HAS_QUARTER;
-                Console.WriteLine("You inserted a quarter");
-            }
-            else if (_state == SOLD_OUT)
-            {
-                Console.WriteLine("You can't insert a quarter, the machine is sold out");
-            }
-            else if (_state == SOLD)
-            {
-                Console.WriteLine("Please wait, we're already giving you a gumball");
-            }
+            _state.InsertQuarter();
         }
 
         public void EjectQuarter()
         {
-            if (_state == HAS_QUARTER)
-            {
-                Console.WriteLine("Quarter returned");
-                _state = NO_QUARTER;
-            }
-            else if (_state == NO_QUARTER)
-            {
-                Console.WriteLine("You haven't inserted a quarter");
-            }
-            else if (_state == SOLD)
-            {
-                Console.WriteLine("Sorry, you already turned the crank");
-            }
-            else if (_state == SOLD_OUT)
-            {
-                Console.WriteLine("You can't eject, you haven't inserted a quarter yet");
-            }
+            _state.EjectQuarter();
         }
 
         public void TurnCrank()
         {
-            if (_state == SOLD)
-            {
-                Console.WriteLine("Turning twice doesn't get you another gumball!");
-            }
-            else if (_state == NO_QUARTER)
-            {
-                Console.WriteLine("You turned but there's no quarter");
-            }
-            else if (_state == SOLD_OUT)
-            {
-                Console.WriteLine("You turned, but there are no gumballs");
-            }
-            else if (_state == HAS_QUARTER)
-            {
-                Console.WriteLine("You turned...");
-                _state = SOLD;
-                Dispense();
-            }
+            _state.TurnCrank();
+            _state.Dispense();
         }
 
-        private void Dispense()
+        internal void ReleaseBall()
         {
-            if (_state == SOLD)
+            Console.WriteLine("A gumball comes rolling out the slot...");
+            if (_count > 0)
             {
-                Console.WriteLine("A gumball comes rolling out the slot");
                 _count = _count - 1;
-                if (_count == 0)
-                {
-                    Console.WriteLine("Oops, out of gumballs!");
-                    _state = SOLD_OUT;
-                }
-                else
-                {
-                    _state = NO_QUARTER;
-                }
-            }
-            else if (_state == NO_QUARTER)
-            {
-                Console.WriteLine("You need to pay first");
-            }
-            else if (_state == SOLD_OUT)
-            {
-                Console.WriteLine("No gumball dispensed");
-            }
-            else if (_state == HAS_QUARTER)
-            {
-                Console.WriteLine("No gumball dispensed");
             }
         }
-
+        
         public void Refill(int numGumBalls)
         {
             _count = numGumBalls;
-            _state = NO_QUARTER;
+            _state = _noQuarterState;
         }
 
         public override string ToString()
@@ -127,32 +65,62 @@ namespace _10.State
             var result = new StringBuilder();
             result.Append("\nMighty Gumball, Inc.");
             result.Append("\nJava-enabled Standing Gumball Model #2004\n");
-            result.Append("Inventory: " + _count + " gumball");
+            result.Append($"Inventory: {_count.ToString()} gumball");
             if (_count != 1)
             {
                 result.Append("s");
             }
 
             result.Append("\nMachine is ");
-            if (_state == SOLD_OUT)
+            if (_state == _soldOutState)
             {
                 result.Append("sold out");
             }
-            else if (_state == NO_QUARTER)
+            else if (_state == _noQuarterState)
             {
                 result.Append("waiting for quarter");
             }
-            else if (_state == HAS_QUARTER)
+            else if (_state == _hasQuarterState)
             {
                 result.Append("waiting for turn of crank");
             }
-            else if (_state == SOLD)
+            else if (_state == _soldState)
             {
                 result.Append("delivering a gumball");
             }
 
             result.Append("\n");
             return result.ToString();
+        }
+
+        internal void SetState(IState state)
+        {
+            _state = state;
+        }
+
+        internal IState GetHasQuarterState()
+        {
+            return _hasQuarterState;
+        }
+
+        internal IState GetNoQuarterState()
+        {
+            return _noQuarterState;
+        }
+
+        internal IState GetSoldOutState()
+        {
+            return _soldOutState;
+        }
+
+        internal IState GetSoldState()
+        {
+            return _soldState;
+        }
+
+        internal int GetCount()
+        {
+            return _count;
         }
     }
 }
