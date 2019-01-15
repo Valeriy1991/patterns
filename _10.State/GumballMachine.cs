@@ -1,8 +1,10 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Text;
 using _10.State.States;
 using _10.State.States.Abstract;
 
+[assembly:InternalsVisibleTo("_10.State.Tests")]
 namespace _10.State
 {
     public class GumballMachine
@@ -13,7 +15,7 @@ namespace _10.State
         private readonly IState _soldState;
         private readonly IState _winnerState;
 
-        private IState _state;
+        internal IState State { get; private set; }
         private int _count = 0;
 
         public GumballMachine(int count)
@@ -27,24 +29,28 @@ namespace _10.State
             _count = count;
             if (count > 0)
             {
-                _state = _noQuarterState;
+                State = _noQuarterState;
+            }
+            else
+            {
+                State = _soldOutState;
             }
         }
 
         public void InsertQuarter()
         {
-            _state.InsertQuarter();
+            State.InsertQuarter();
         }
 
         public void EjectQuarter()
         {
-            _state.EjectQuarter();
+            State.EjectQuarter();
         }
 
         public void TurnCrank()
         {
-            _state.TurnCrank();
-            _state.Dispense();
+            State.TurnCrank();
+            State.Dispense();
         }
 
         internal void ReleaseBall()
@@ -59,7 +65,7 @@ namespace _10.State
         public void Refill(int numGumBalls)
         {
             _count = numGumBalls;
-            _state = _noQuarterState;
+            State = _noQuarterState;
         }
 
         public override string ToString()
@@ -74,19 +80,19 @@ namespace _10.State
             }
 
             result.Append("\nMachine is ");
-            if (_state == _soldOutState)
+            if (State == _soldOutState)
             {
                 result.Append("sold out");
             }
-            else if (_state == _noQuarterState)
+            else if (State == _noQuarterState)
             {
                 result.Append("waiting for quarter");
             }
-            else if (_state == _hasQuarterState)
+            else if (State == _hasQuarterState)
             {
                 result.Append("waiting for turn of crank");
             }
-            else if (_state == _soldState)
+            else if (State == _soldState)
             {
                 result.Append("delivering a gumball");
             }
@@ -97,7 +103,7 @@ namespace _10.State
 
         internal void SetState(IState state)
         {
-            _state = state;
+            State = state;
         }
 
         internal IState GetHasQuarterState()
