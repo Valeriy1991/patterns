@@ -3,6 +3,7 @@ using _12.CompoundPatterns.Ducks;
 using _12.CompoundPatterns.Ducks.Abstract;
 using _12.CompoundPatterns.Ducks.Decorators;
 using _12.CompoundPatterns.Ducks.Factories;
+using _12.CompoundPatterns.Ducks.Observation;
 using _12.CompoundPatterns.Geese;
 using _12.CompoundPatterns.Geese.Factories;
 
@@ -37,12 +38,19 @@ namespace _12.CompoundPatterns
 
             Console.WriteLine("\n--- Duck simulator ---\n");
             
-            Console.WriteLine("\n---- Duck simulator: Whole Flock simulation\n");
+//            Console.WriteLine("\n---- Duck simulator: Whole Flock simulation\n");
+//            Simulate(ducksFlock);
+//            
+//            Console.WriteLine("\n---- Duck simulator: Whole Flock simulation\n");
+//            Simulate(mallardDucksFlock);
+            
+//            Console.WriteLine($"The ducks quacked {QuackCounterDecorator.AllQuacksCount} times");
+
+            Console.WriteLine("\n---- Duck simulator: with observer\n");
+            var quackologist = new Quackologist();
+            ducksFlock.RegisterObserver(quackologist);
             Simulate(ducksFlock);
             
-            Console.WriteLine("\n---- Duck simulator: Whole Flock simulation\n");
-            Simulate(mallardDucksFlock);
-
             Console.WriteLine($"The ducks quacked {QuackCounterDecorator.AllQuacksCount} times");
         }
 

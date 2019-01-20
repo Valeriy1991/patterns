@@ -1,4 +1,5 @@
 using _12.CompoundPatterns.Ducks.Abstract;
+using _12.CompoundPatterns.Ducks.Observation;
 
 namespace _12.CompoundPatterns.Ducks.Decorators
 {
@@ -16,6 +17,16 @@ namespace _12.CompoundPatterns.Ducks.Decorators
         {
             AllQuacksCount++;
             _duck.Quack();
+        }
+
+        public void RegisterObserver(IObserver observer)
+        {
+            _duck.RegisterObserver(observer);
+        }
+
+        public void NotifyObservers()
+        {
+            _duck.NotifyObservers();
         }
     }
 }
