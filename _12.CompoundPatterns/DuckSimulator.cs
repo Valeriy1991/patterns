@@ -4,18 +4,19 @@ using _12.CompoundPatterns.Ducks.Abstract;
 using _12.CompoundPatterns.Ducks.Decorators;
 using _12.CompoundPatterns.Ducks.Factories;
 using _12.CompoundPatterns.Geese;
+using _12.CompoundPatterns.Geese.Factories;
 
 namespace _12.CompoundPatterns
 {
     public class DuckSimulator
     {
-        public void Simulate(AbstractDuckFactory duckFactory)
+        public void Simulate(AbstractDuckFactory duckFactory, AbstractGooseAdapterFactory gooseAdapterFactory)
         {
             var mallardDuck = duckFactory.CreateMallardDuck();
             var redheadDuck = duckFactory.CreateRedheadDuck();
             var duckCall = duckFactory.CreateDuckCall();
             var rubberDuck = duckFactory.CreateRubberDuck();
-            var goose = new GooseAdapter(new Goose());
+            var goose = gooseAdapterFactory.CreateGooseAdapter();
 
             Console.WriteLine("\n--- Duck simulator ---\n");
 
