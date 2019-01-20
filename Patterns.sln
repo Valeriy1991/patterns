@@ -31,6 +31,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "_10.State.Tests", "_10.Stat
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_12.CompoundPatterns", "_12.CompoundPatterns\_12.CompoundPatterns.csproj", "{77388EB2-94A9-4523-856C-B84964A03F78}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "_12.MVC", "_12.MVC\_12.MVC.csproj", "{D005D065-BFAE-44A2-ACFF-02A15DAEC0C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -93,6 +95,10 @@ Global
 		{77388EB2-94A9-4523-856C-B84964A03F78}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{77388EB2-94A9-4523-856C-B84964A03F78}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{77388EB2-94A9-4523-856C-B84964A03F78}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D005D065-BFAE-44A2-ACFF-02A15DAEC0C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D005D065-BFAE-44A2-ACFF-02A15DAEC0C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D005D065-BFAE-44A2-ACFF-02A15DAEC0C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D005D065-BFAE-44A2-ACFF-02A15DAEC0C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
